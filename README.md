@@ -4,7 +4,7 @@ This IOC-Extractor script gets a list of ip addresses and finds the malicious on
 in this version it only supports Virustotal, in future i will add support of more platforms and more other features.
 
 ## sampple 
-ip_addresses = ['185.219.81.232',"192.168.1.1","8.8.8.8"]
+ip_addresses = ["185.219.81.232","192.168.1.1","8.8.8.8"]
 ## output
 ```
 [
