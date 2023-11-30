@@ -1,4 +1,5 @@
 import requests
+#api_key variable is defined in "creds.py file" which should be created and used by yourself
 import creds
 import json
 def get_virustotal_info(api_key, ip_address):
