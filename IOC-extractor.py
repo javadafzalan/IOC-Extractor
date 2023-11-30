@@ -48,5 +48,5 @@ def IOC_Extractor(ip_addresses):
             indicators.append(item_info)
     return indicators
 ############################################################
-ip_addresses = ['185.219.81.232',"192.168.1.1","8.8.8.8"]
+ip_addresses = ["185.219.81.232","192.168.1.1","8.8.8.8"]
 print(json.dumps(IOC_Extractor(ip_addresses), indent=4))
