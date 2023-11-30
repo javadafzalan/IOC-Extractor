@@ -1,6 +1,6 @@
 # IOC-Extractor
 
-this script gets a list of ip addresses and finds the malicious ones using virustotal API.
+This IOC-Extractor script gets a list of ip addresses and finds the malicious ones using virustotal API.
 in this version it only supports Virustotal, in future i will add support of more platforms and more other features.
 
 ## sampple 
