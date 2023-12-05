@@ -1,10 +1,11 @@
 # IOC-Extractor
+##update : [support of Abuse IPDB added]
 
-This IOC-Extractor script gets a list of ip addresses and finds the malicious ones using virustotal API.
-in this version it only supports Virustotal, in future i will add support of more platforms and more other features.
+This IOC-Extractor script gets a list of ip addresses and finds the malicious ones using security platform APIs.
+in this version it  supports Virustotal,abuse IPDB.in future i will add support of more platforms and more other features.
 
 ## sampple 
-ip_addresses = ["185.219.81.232","192.168.1.1","8.8.8.8"]
+ip_addresses = ["185.219.81.232","43.156.118.145","195.158.24.42"]
 ## output
 ```
 [
@@ -15,26 +16,38 @@ ip_addresses = ["185.219.81.232","192.168.1.1","8.8.8.8"]
             {
                 "provider": "virustotal",
                 "verdict": "malware"
-            }
-        ]
-    },
-    {
-        "ip": "192.168.1.1",
-        "type": "ip_address",
-        "provider": [
+            },
             {
-                "provider": "virustotal",
+                "provider": "abuse_ipdb",
                 "verdict": "clean"
             }
         ]
     },
     {
-        "ip": "8.8.8.8",
+        "ip": "43.156.118.145",
         "type": "ip_address",
         "provider": [
             {
                 "provider": "virustotal",
-                "verdict": "malware"
+                "verdict": "malicious"
+            },
+            {
+                "provider": "abuse_ipdb",
+                "verdict": "malicious"
+            }
+        ]
+    },
+    {
+        "ip": "195.158.24.42",
+        "type": "ip_address",
+        "provider": [
+            {
+                "provider": "virustotal",
+                "verdict": "malicious"
+            },
+            {
+                "provider": "abuse_ipdb",
+                "verdict": "malicious"
             }
         ]
     }

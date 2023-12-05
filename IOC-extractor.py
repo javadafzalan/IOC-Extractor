@@ -25,8 +25,12 @@ def get_abuse_ipdb_info(api_key, ip_address):
         'Key': api_key
     }
     response = requests.request(method='GET', url=url, headers=headers, params=querystring)
-    decodedResponse = json.loads(response.text)
-    return decodedResponse
+    if response.status_code==200:
+        decodedResponse = json.loads(response.text)
+        return decodedResponse
+    else:
+        print(f"Error: {response.status_code}")
+        return None
 def IOC_Extractor(ip_addresses):
     indicators=[]
     virustotal_api_key=creds.virustotal_api_key
@@ -41,8 +45,7 @@ def IOC_Extractor(ip_addresses):
             abuseipdb_verdict="clean"
         ##########VIRUSTOTAL##############
         virustotal_result = get_virustotal_info(virustotal_api_key, ip_address)
-        if virustotal_result:           
-            virustotal_obj_analysis_stats=virustotal_result["data"]["attributes"]["last_analysis_stats"]
+        if virustotal_result:
             virustotal_obj_analysis_results=virustotal_result["data"]["attributes"]["last_analysis_results"]
             virustotal_obj_security_vendors=virustotal_obj_analysis_results.keys()
             for vendor in virustotal_obj_security_vendors:
