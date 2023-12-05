@@ -1,5 +1,5 @@
 # IOC-Extractor
-##update : [support of Abuse IPDB added]
+## update : [support of Abuse IPDB added]
 
 This IOC-Extractor script gets a list of ip addresses and finds the malicious ones using security platform APIs.
 in this version it  supports Virustotal,abuse IPDB.in future i will add support of more platforms and more other features.
