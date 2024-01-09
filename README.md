@@ -4,7 +4,7 @@
 This IOC-Extractor script gets a list of ip addresses and finds the malicious ones using security platform APIs.
 in this version it  supports Virustotal,abuse IPDB.in future i will add support of more platforms and more other features.
 
-## sampple 
+## sample 
 ip_addresses = ["185.219.81.232","43.156.118.145","195.158.24.42"]
 ## output
 ```
